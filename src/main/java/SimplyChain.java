@@ -23,6 +23,10 @@ public class SimplyChain {
         return blockchainJson;
     }
 
+    public Block get(int index){
+        return blockchain.get(index);
+    }
+
     public int size(){
         return blockchain.size();
     }

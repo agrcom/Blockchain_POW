@@ -46,4 +46,28 @@ public class SimpleChainTest {
         assertTrue(chain.isChainValid());
     }
 
+    @Test
+    @DisplayName("Mining Blocks")
+    public void miningBlocks(){
+        SimplyChain chain = new SimplyChain();
+        chain.add("First element of chain");
+        chain.get(0).mineBlock(0);
+
+        chain.add("Second element of chain");
+        chain.get(1).mineBlock(1);
+
+        chain.add("Third element of chain");
+        chain.get(2).mineBlock(1);
+
+        chain.add("Fourth element of chain");
+        chain.get(3).mineBlock(1);
+
+        chain.add("Fifth element of chain");
+        chain.get(4).mineBlock(1);
+
+        assertTrue(chain.isChainValid());
+
+    }
+
+
 }
