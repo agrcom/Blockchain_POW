@@ -14,7 +14,7 @@ public class Block {
         this.hash = calculateHash();
     }
 
-    private String calculateHash() {
+    public String calculateHash() {
         String calculatedhash = Encryptor.applySha256(previousHash +
                         Long.toString(timeStamp) +
                         data);
