@@ -1,11 +1,14 @@
 import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class SimplyChain {
 
 
     private static ArrayList<Block> blockchain = new ArrayList<Block>();
+    public static HashMap<String,TransactionOutput> UTXOs = new HashMap<String,TransactionOutput>(); //list of all unspent transactions.
+    public static float minimumTransaction = 0.1f;
 
     public void add(String data){
         if(blockchain.size()==0){

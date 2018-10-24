@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TransactionTest {
@@ -12,6 +13,8 @@ public class TransactionTest {
 
         Transaction first = new Transaction(walletFirst.publicKey, walletSecond.publicKey, 10, null);
         first.generateSignature(walletFirst.privateKey);
+        System.out.println("Value: " + first.value);
+        System.out.println("TransactionId: " + first.transactionId);
 
         assertTrue(first.verifiySignature());
 
